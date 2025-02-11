@@ -40,7 +40,7 @@ function renderLicenseSection(license) {
   if (license === "none") {
     return "";
   } else {
-    return `This application is covered under the ${renderLicenseLink(license)}.\n\n`;
+    return `This application is covered under the ${renderLicenseLink(license)},${renderLicenseBadge(license)}.\n\n`;
   }
 }
 
@@ -51,8 +51,14 @@ export default function generateMarkdown(data) {
 
   ${renderLicenseBadge(data.license)}
 
+ 
   ## Description
   ${data.description}
+
+  ## Table of Contents
+
+   ## License
+  ${renderLicenseSection(data.license)}
 
   ## Installation Instructions
   ${data.installationInstructions}
@@ -65,11 +71,11 @@ export default function generateMarkdown(data) {
 
   ## Test Instructions
   ${data.testInstructions}
+  ## Link to Test Video
+  ${(src="https://drive.google.com/file/d/1nofjP3alxlPjV1u1tsU6nKWaZpK8ePHj/preview" width="640" height="480")}
 
-  ## License
-  ${renderLicenseSection(data.license)}
-
-  ## Questions
+    ## Questions
   If you have any questions, you can reach me at [${data.github}](https://github.com/${data.github}) or via email at ${data.email}.
   `;
+  
 }
