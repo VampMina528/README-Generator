@@ -71,11 +71,8 @@ export default function generateMarkdown(data) {
 
   ## Test Instructions
   ${data.testInstructions}
-  ## Link to Test Video
-  ${(src="https://drive.google.com/file/d/1nofjP3alxlPjV1u1tsU6nKWaZpK8ePHj/preview" width="640" height="480")}
+  ## Link to Test Video "README generator" ("https://drive.google.com/file/d/11Or1Wfdo6z99KcyuholDe4joLNE_gaOw/preview")
 
-    ## Questions
-  If you have any questions, you can reach me at [${data.github}](https://github.com/${data.github}) or via email at ${data.email}.
-  `;
-  
+  ## Questions
+  If you have any questions, you can reach me at [${data.github}](https://github.com/${data.github}) or via email at ${data.email}.`;
 }
